@@ -90,8 +90,8 @@ string frame_id
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
       buff.write(_struct_h3d.pack(_x.planeID, _x.latitude, _x.longitude, _x.altitude))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize(self, str):
     """
@@ -118,7 +118,7 @@ string frame_id
       end += 26
       (_x.planeID, _x.latitude, _x.longitude, _x.altitude,) = _struct_h3d.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 
@@ -138,8 +138,8 @@ string frame_id
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
       buff.write(_struct_h3d.pack(_x.planeID, _x.latitude, _x.longitude, _x.altitude))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -168,7 +168,7 @@ string frame_id
       end += 26
       (_x.planeID, _x.latitude, _x.longitude, _x.altitude,) = _struct_h3d.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I

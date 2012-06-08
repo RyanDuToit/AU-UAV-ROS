@@ -21,9 +21,9 @@ rosbuild_genmsg()
 #uncomment if you have defined services
 rosbuild_gensrv()
 
-add_jar_dir(/usr/share/java)
+#add_jar_dir(/usr/share/java)
 #add_runtime_classpath(${PROJECT_SOURCE_DIR}/bin)
-add_java_source_dir(${PROJECT_SOURCE_DIR}/src/JAVA)
+#add_java_source_dir(${PROJECT_SOURCE_DIR}/src/JAVA)
 
 #common commands for building c++ executables and libraries
 #rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
@@ -43,4 +43,4 @@ rosbuild_add_executable(visualization src/visualization.cpp)
 rosbuild_add_executable(evaluator src/evaluator.cpp src/AU_UAV_ROS/standardDefs.cpp)
 
 #JAVA executables
-rospack_add_java_executable(XBeeIO com/GCS/xbee/XBeeGCS)
+#rospack_add_java_executable(XBeeIO com/GCS/xbee/XBeeGCS)

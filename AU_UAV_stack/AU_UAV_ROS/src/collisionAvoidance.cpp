@@ -14,6 +14,7 @@ is already setup along with a dummy version of how the service request would wor
 #include "AU_UAV_ROS/TelemetryUpdate.h"
 #include "AU_UAV_ROS/GoToWaypoint.h"
 
+
 //ROS service client for calling a service from the coordinator
 ros::ServiceClient client;
 
@@ -39,7 +40,7 @@ void telemetryCallback(const AU_UAV_ROS::TelemetryUpdate::ConstPtr& msg)
 		srv.request.latitude = 100;
 		srv.request.longitude = 100;
 		srv.request.altitude = 100;
-		
+        
 		//these settings mean it is an avoidance maneuver waypoint AND to clear the avoidance queue
 		srv.request.isAvoidanceManeuver = true;
 		srv.request.isNewQueue = true;

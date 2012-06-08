@@ -66,8 +66,8 @@ int16 requestedID
     try:
       _x = self
       buff.write(_struct_3dqh.pack(_x.startingLatitude, _x.startingLongitude, _x.startingAltitude, _x.startingBearing, _x.requestedID))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize(self, str):
     """
@@ -82,7 +82,7 @@ int16 requestedID
       end += 34
       (_x.startingLatitude, _x.startingLongitude, _x.startingAltitude, _x.startingBearing, _x.requestedID,) = _struct_3dqh.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 
@@ -97,8 +97,8 @@ int16 requestedID
     try:
       _x = self
       buff.write(_struct_3dqh.pack(_x.startingLatitude, _x.startingLongitude, _x.startingAltitude, _x.startingBearing, _x.requestedID))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -115,7 +115,7 @@ int16 requestedID
       end += 34
       (_x.startingLatitude, _x.startingLongitude, _x.startingAltitude, _x.startingBearing, _x.requestedID,) = _struct_3dqh.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I
@@ -172,8 +172,8 @@ class CreateSimulatedPlaneResponse(roslib.message.Message):
     """
     try:
       buff.write(_struct_h.pack(self.planeID))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize(self, str):
     """
@@ -187,7 +187,7 @@ class CreateSimulatedPlaneResponse(roslib.message.Message):
       end += 2
       (self.planeID,) = _struct_h.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 
@@ -201,8 +201,8 @@ class CreateSimulatedPlaneResponse(roslib.message.Message):
     """
     try:
       buff.write(_struct_h.pack(self.planeID))
-    except struct.error, se: self._check_types(se)
-    except TypeError, te: self._check_types(te)
+    except struct.error as se: self._check_types(se)
+    except TypeError as te: self._check_types(te)
 
   def deserialize_numpy(self, str, numpy):
     """
@@ -218,7 +218,7 @@ class CreateSimulatedPlaneResponse(roslib.message.Message):
       end += 2
       (self.planeID,) = _struct_h.unpack(str[start:end])
       return self
-    except struct.error, e:
+    except struct.error as e:
       raise roslib.message.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = roslib.message.struct_I

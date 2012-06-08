@@ -1,0 +1,5 @@
+AU_UAV_ROS.xcworkspace
+.DS_STORE
+AU_UAV_stack/build/*
+AU_UAV_ROS/build/CMakeFiles/*
+build/*
